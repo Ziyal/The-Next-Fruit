@@ -14,6 +14,10 @@ body {
     background-color: #FEFEFE;
 }
 
+ul {
+    padding: 0px;
+}
+
 body:after {
     content: "less than 320px";
     font-size: 300%;
@@ -37,6 +41,23 @@ body:after {
     margin: 0px 10px 0px 10px; 
 }
 
+.dots {
+    margin: 0px 0px 10px 0px;
+    font-size: 20px;
+    color: #7f7f7f;
+}
+
+.link-nav {
+    color: #AAA;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase; 
+    font-size: 16px;
+}
+
+.link-nav:hover {
+    color: #000;
+}
+
 .link-grey {
     color: #cccccc;
 }
@@ -50,9 +71,9 @@ body:after {
     background-color: #131313;
 }
 
-
 .footer-title {
     color: #AAA;
+    font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase; 
     font-size: 14px;
     margin: 5px 0px 5px 0px;
@@ -64,6 +85,10 @@ body:after {
 
 .footer-links li a:hover {
     color: #fff;
+}
+
+.social-icon {
+    width: 16px;
 }
 
 
@@ -115,39 +140,36 @@ body:after {
 
 }
 
-/*@media only screen and (min-width: 480px) {
-    body:after {
-        content: "480 to 768px";
-        background-color: hsla(180,60%,40%,0.7);
-    }
-
-    .topbar-container {
-        display: none;
-    }
-
-    .navbar-container {
-        display: none;
-    }
-
-    .featured-story {
-        width: 100%;
-    }
-
-
-}*/
-
-
 
 @media only screen and (min-width: 768px) {
     body:after {
         content: "768 to 1024px";
         background-color: hsla(270,60%,40%,0.7);
+
+
     }
 }
+
 @media only screen and (min-width: 1024px) {
     body:after {
         content: "1024 and up";
         background-color: hsla(360,60%,40%,0.7);
+    }
+
+    .navbar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    .navbar-links {
+        width: 60%;
+    }
+
+    .navbar-social {
+        width: 39%;
+        text-align: right;
     }
 
     .topbar-container {
@@ -155,9 +177,19 @@ body:after {
         font-size: 13px;
         background-color: black;
         display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
         align-items: center;
         width: 100%;
-        /*justify-content: space-between; */
+    }
+
+    .topbar-left {
+        width: 60%;
+    }
+
+    .topbar-right {
+        width: 39%;
+        text-align: right;
     }
 
 
