@@ -39,8 +39,11 @@ body:after {
 
 .ul {
     list-style: none;
-    /*padding: 0px;
-    margin: 0px 0px 0px 10px; */
+}
+
+/* ----- Navbar ----- */
+.logo {
+    max-width: 110px;
 }
 
 .top-link {
@@ -81,8 +84,12 @@ body:after {
 /* ----- FOOTER ----- */
 .footer {
     background-color: #131313;
+}
+
+.footer-columns {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding: 25px 0px 20px 0px;
 }
 
 .footer-trending {
@@ -93,7 +100,7 @@ body:after {
 }
 
 .block {
-    width: 30%;
+    width: 25%;
 }
 
 .footer-title {
@@ -101,6 +108,10 @@ body:after {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase; 
     font-size: 14px;
+    margin: 5px 0px 5px 0px;
+}
+
+.footer-links li {
     margin: 5px 0px 5px 0px;
 }
 
@@ -119,10 +130,13 @@ body:after {
 .footer-legal {
     order: 2;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 60px;
+    margin: 0px;
     background-color: #000;
     color: #AAA;
-    margin: 0px;
+    font-size: .75rem;
 }
 
 .copyright {
@@ -131,79 +145,77 @@ body:after {
     /*align-items: center;*/
 }
 
+.topbar-container {
+    display: none;
+}
 
+.navbar-links {
+    display: none;
+}
 
-@media only screen and (min-width: 320px) {
-    body:after {
-        content: "320 to 768px";
-        background-color: hsla(90,60%,40%,0.7);
-    }
+/* ----- FEATURED ----- */
+.featured {
+    padding: 2px;
+}
 
-    .topbar-container {
-        display: none;
-    }
+.featured-story {
+    /*width: 100%;*/
+    min-height: 200px;
+    max-height: 250px;
+    margin: 5px;
+    background-position: center center;
+    overflow: hidden;
+}
 
-    .navbar-links {
-        display: none;
-    }
+.featured-story img {
+    max-width: 100%;
+    background-size: cover;
+}
 
-    /* ----- FEATURED ----- */
-    .featured {
-        padding: 2px;
-    }
+.featured-text {
+    position: absolute;
+    display: block;
+    /*left: 0;
+    width: 100%;
+    text-align: center;*/
+    font-size: 40px;
+    /*top: 40%;*/
+    color: white;
 
-    .featured-story {
-        /*width: 100%;*/
-        min-height: 200px;
-        max-height: 250px;
-        margin: 5px;
-        background-position: center center;
-        overflow: hidden;
-    }
+}
 
-    .featured-story img {
-        max-width: 100%;
-        background-size: cover;
-    }
+.featured-title {
+    font-weight: bold;
+}
 
-    .featured-text {
-        display: block;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 40px;
-        top: 40%;
-        color: white;
+.featured-category {
+    text-transform: uppercase; 
+}
 
-    }
+/* Latest News */
+.latest .article {
+    display: flex;
+    overflow: hidden;
+    padding: 10px;
 
-    /* Latest News */
-    .latest .article {
-        display: flex;
-        overflow: hidden;
-        padding: 10px;
+}
+.latest .article img {
+    max-height: 72px;
+    padding: 0px 10px 0px 0px;
+}
 
-    }
-    .latest .article img {
-        max-height: 72px;
-        padding: 0px 10px 0px 0px;
-    }
+.article-title {
+    /*align-items: flex-end;*/
+    font-weight: bold;
+    color: #000;
+    margin: 0px 0px 5px 5px;
+}
 
-    .article-title {
-        /*align-items: flex-end;*/
-        font-weight: bold;
-        color: #000;
-        margin: 0px 0px 5px 5px;
-    }
-
-    .article-author {
-        /*align-items: flex-end;*/
-        font-size: .7rem;
-        color: grey;
-        margin: 7px 0px 0px 5px;
-    }
-
+.article-author {
+    /*align-items: flex-end;*/
+    font-size: .7rem;
+    color: grey;
+    margin: 7px 0px 0px 5px;
 }
 
 
@@ -211,6 +223,38 @@ body:after {
     body:after {
         content: "768 to 1024px";
         background-color: hsla(270,60%,40%,0.7);
+    }
+
+    .topbar-container {
+        height: 32px;
+        font-size: 13px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-container {
+        height: 45px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: flex;
+        width: 60%;
+        margin: 0px 0px 0px 8px;
+    }
+
+    .navbar-social {
+        width: 39%;
+        text-align: right;
+        margin: 0px 8px 0px 0px;
     }
 
     /* Latest News */
@@ -257,25 +301,8 @@ body:after {
     }
 
     /* Navbar */
-    .navbar-container {
-        height: 45px;
-        background-color: #fff;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; 
-        align-items: center;
-    }
-
-    .navbar-links {
-        display: flex;
-        width: 60%;
-        margin: 0px 0px 0px 8px;
-    }
-
-    .navbar-social {
-        width: 39%;
-        text-align: right;
-        margin: 0px 8px 0px 0px;
+    .logo {
+        display: none;
     }
 
     /* Black Bar */
@@ -300,6 +327,83 @@ body:after {
         text-align: right;
         margin: 0px 8px 0px 0px;
     }
+    
+    /* Featured Articles */
+    .featured {
+        display: flex;
+        max-height: 560px;
+    }
+
+    .featured .featured-story {
+        overflow: hidden;
+        /*max-height: 500px;*/
+        height: 100%;
+        min-height: 200px;
+        max-height: 250px;
+    }
+
+    .featured .featured-l {
+        width: 66%;
+        /*min-height: 400px;*/
+    }
+
+    .featured .featured-l img {
+        /*height: 100%;*/
+    }
+
+    .featured .featured-right {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+    }
+
+    .featured .featured-right .featured-s {
+        /*height: 100%;
+        max-height: 400px;*/
+    }
+
+    .featured .featured-right .featured-s img {
+        background-size: cover;
+        background-position: center center;
+        max-width: 600px;
+        /*height: 100%;*/
+    }
+
+
+    /* Latest News */
+    .latest {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .latest .article {
+        display: flex;
+        flex-direction: column;
+        width: 23%;
+        overflow: hidden;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .latest .article img {
+        width: 100%;
+        max-height: 140px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .article-title {
+        font-weight: bold;
+        color: #000;
+        margin: 4px 0px 0px 0px;
+    }
+
+    .article-author {
+        font-size: .7rem;
+        color: grey;
+        margin: 4px 0px 0px 0px;
+    } 
 
 
 }
